@@ -167,7 +167,8 @@ const options: ApexOptions = {
 const Chart = () => {
   useEffect(() => {
     // Trigger resize manually so chart doesn't fall off canvas
-    window.dispatchEvent(new Event("resize"));
+    //TODO
+    //window.dispatchEvent(new Event("resize"));
   }, []);
 
   return (

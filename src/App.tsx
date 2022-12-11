@@ -6,6 +6,7 @@ import { BarChart } from "react-feather";
 import Sidebar from "./components/sidebar/Sidebar";
 import NavbarComponent from "./components/navbar/Navbar";
 import Home from "./components/Home";
+import Indexes from "./components/markets/indexes/index";
 import Crypto from "./components/markets/crypto/index";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       badge: "1",
       children: [
         {
-          href: "/markets/indicies",
+          href: "/markets/indexes",
           title: "Indexes",
         },
         {
@@ -47,10 +48,12 @@ function App() {
           <Sidebar items={items} />
           <div className="main">
             <NavbarComponent />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/crypto" element={<Crypto />} />
-            </Routes>
+            <div className="content">
+              <Routes>
+                <Route path="/markets/indexes" element={<Indexes />} />
+                <Route path="/markets/crypto" element={<Crypto />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </SidebarProvider>
